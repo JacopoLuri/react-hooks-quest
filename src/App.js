@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
+  let [counter, plusOne] = useState(0)
+
+  // plusOne = () => counter + 1;
+   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <p>Counter: {counter}</p>
+     <button onClick={() => plusOne(counter + 1)}>Plus one</button>
+     {/* <button onClick={plusOne}>Plus one</button> */}
+    </>
   );
 }
 
